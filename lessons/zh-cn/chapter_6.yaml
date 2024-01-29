@@ -164,7 +164,7 @@
     `format!` 和 `println!` 生成的参数化字符串相同，只是 `format!` 将其返回而 `println!` 将其打印出来。
 
 
-    这个函数涉及的内容太过广泛，因而不可能在 *Rust 语言之旅* 中详细介绍， 
+    这个函数涉及的内容太过广泛，因而不可能在 *Rust 语言之旅* 中详细介绍，
     如需了解完整的内容可看[这里](https://doc.rust-lang.org/std/fmt/)。
   code: >-
     https://play.rust-lang.org/?version=stable&mode=debug&edition=2018&code=fn%20main()%20%7B%0A%20%20%20%20let%20a%20%3D%2042%3B%0A%20%20%20%20let%20f%20%3D%20format!(%22%E7%94%9F%E6%B4%BB%E8%AF%80%E7%AA%8D%3A%20%7B%7D%22%2Ca)%3B%0A%20%20%20%20println!(%22%7B%7D%22%2Cf)%3B%0A%7D%0A

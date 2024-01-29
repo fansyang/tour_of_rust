@@ -1,6 +1,6 @@
 - title: 第五章 - 所有权和数据借用
   content_markdown: >
-    相较于其他编程语言，Rust 具有一套独特的内存管理范例。为了不让您被概念性的东西淹没，我们将一一展示这些编译器的行为和验证方式。
+    与其他编程语言相比，Rust 具有独特的内存管理模式。为了不让您被概念性的东西淹没，我们将一一展示这些编译器的行为和验证方式。
     有一点很重要：所有这些规则的终极目的不是为了为难您，而是为了更好地降低代码的出错率！
 - title: 所有权
   content_markdown: >
@@ -123,7 +123,7 @@
 
     * Rust 允许使用 `unsafe { ... }` 代码块来进行一些无法被编译器担保的内存操作。The [<span
     style="color:red; font-weight:
-    bold;">R̸͉̟͈͔̄͛̾̇͜U̶͓͖͋̅Ṡ̴͉͇̃̉̀T̵̻̻͔̟͉́͆Ơ̷̥̟̳̓͝N̶̨̼̹̲͛Ö̵̝͉̖̏̾̔M̶̡̠̺̠̐͜Î̷̛͓̣̃̐̏C̸̥̤̭̏͛̎͜O̶̧͚͖͔̊͗̇͠N̸͇̰̏̏̽̃</span>](https://doc.rust-lang.org/nomicon/)（常见的中文翻译为：Rust 死灵书）在讨论时应该被严肃地看待，
+    bold;">R̸͉̟͈͔̄͛̾̇͜U̶͓͖͋̅Ṡ̴͉͇̃̉̀T̵̻̻͔̟͉́͆Ơ̷̥̟̳̓͝N̶̨̼̹̲͛Ö̵̝͉̖̏̾̔M̶̡̠̺̠̐͜Î̷̛͓̣̃̐̏C̸̥̤̭̏͛̎͜O̶̧͚͖͔̊͗̇͠N̸͇̰̏̏̽̃</span>](https://doc.rust-lang.org/nomicon/)（常见的中文翻译为：Rust 死灵书）在讨论时应该被严肃地看待。
   code: >-
     https://play.rust-lang.org/?version=stable&mode=debug&edition=2018&code=static%20PI%3A%20f64%20%3D%203.1415%3B%0A%0Afn%20main()%20%7B%0A%20%20%20%20%2F%2F%20%E9%9D%99%E6%80%81%E5%8F%98%E9%87%8F%E7%9A%84%E8%8C%83%E5%9B%B4%E4%B9%9F%E5%8F%AF%E4%BB%A5%E8%A2%AB%E9%99%90%E5%88%B6%E5%9C%A8%E4%B8%80%E4%B8%AA%E5%87%BD%E6%95%B0%E5%86%85%0A%20%20%20%20static%20mut%20SECRET%3A%20%26'static%20str%20%3D%20%22swordfish%22%3B%0A%0A%20%20%20%20%2F%2F%20%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%AD%97%E9%9D%A2%E5%80%BC%E6%8B%A5%E6%9C%89%20'static%20%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%0A%20%20%20%20let%20msg%3A%20%26'static%20str%20%3D%20%22Hello%20World!%22%3B%0A%20%20%20%20let%20p%3A%20%26'static%20f64%20%3D%20%26PI%3B%0A%20%20%20%20println!(%22%7B%7D%20%7B%7D%22%2C%20msg%2C%20p)%3B%0A%0A%20%20%20%20%2F%2F%20%E4%BD%A0%E5%8F%AF%E4%BB%A5%E6%89%93%E7%A0%B4%E4%B8%80%E4%BA%9B%E8%A7%84%E5%88%99%EF%BC%8C%E4%BD%86%E6%98%AF%E5%BF%85%E9%A1%BB%E6%98%AF%E6%98%BE%E5%BC%8F%E5%9C%B0%0A%20%20%20%20unsafe%20%7B%0A%20%20%20%20%20%20%20%20%2F%2F%20%E6%88%91%E4%BB%AC%E5%8F%AF%E4%BB%A5%E4%BF%AE%E6%94%B9%20SECRET%20%E5%88%B0%E4%B8%80%E4%B8%AA%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%AD%97%E9%9D%A2%E5%80%BC%E5%9B%A0%E4%B8%BA%E5%85%B6%E5%90%8C%E6%A0%B7%E6%98%AF%20'static%20%E7%9A%84%0A%20%20%20%20%20%20%20%20SECRET%20%3D%20%22abracadabra%22%3B%0A%20%20%20%20%20%20%20%20println!(%22%7B%7D%22%2C%20SECRET)%3B%0A%20%20%20%20%7D%0A%7D%0A
 - title: 数据类型中的生命周期

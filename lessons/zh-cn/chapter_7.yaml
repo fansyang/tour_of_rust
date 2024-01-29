@@ -43,7 +43,7 @@
 
     ```rust
 
-    impl MyStruct { 
+    impl MyStruct {
         ...
         fn foo(&self) {
             ...
@@ -90,11 +90,11 @@
 
     ```rust
 
-    impl MyTrait for MyStruct { 
+    impl MyTrait for MyStruct {
         fn foo(&self) {
             ...
         }
-        ... 
+        ...
     }
 
     ```
@@ -251,7 +251,7 @@
     ```
 - title: 第七章 - 总结
   content_markdown: >
-    现在我们手头有了更多可以清晰地表达我们的想法的语言功能！ 
+    现在我们手头有了更多可以清晰地表达我们的想法的语言功能！
 
     Rust 的抽象可能很简单，但它们强大到足以让我们写代码写得很愉快。
     在本章中，我们通过 `Box` 简单瞥见了智能指针。在下一章中，我们将了解智能指针如何帮助我们处理其他特定的内存情况。
