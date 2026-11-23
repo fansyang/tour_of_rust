@@ -44,6 +44,7 @@ This project also aims to provide this book in as many languages as possible.
 * Ελληνικά - [DoubleHyphen](https://github.com/DoubleHyphen/)
 * Italian - [Andrea Manzini](https://github.com/ilmanzo/)
 * العربية - [Fethienv](https://github.com/Fethienv)
+* Українська - [Arnaghad](https://github.com/Arnaghad)
 
 
 # Looking for translators!
@@ -80,6 +81,17 @@ After installing the dependencies use `make` to launch the site. You will need t
 to see the changes you've made.
 Windows users should use `make.bat` instead.
 
+## How the site is published
+
+The site at https://tourofrust.com/ is built and deployed automatically by
+GitHub Actions on every push to `master` (workflow: `.github/workflows/pages.yml`).
+
+To republish without a new commit, use **Actions → Deploy to GitHub Pages → Run workflow**,
+or `gh workflow run pages.yml --ref master`.
+
+The published site is the contents of `docs/` after `npm ci && npm run build`
+(generated HTML plus the static assets and `CNAME` already in `docs/`).
+
 # Releases
 
 ## Releases 6 - Sept, 2024
@@ -92,7 +104,6 @@ Windows users should use `make.bat` instead.
 * Chapter 4 released in Chinese and Spanish
 * Chapter 3 released in French
 * Minor fixes
-* Chapter 2 of Tour of WebAssembly released
 
 ## Release 4 - May 30, 2020
 * Chapter 5 released on ownership and sharing
@@ -100,7 +111,6 @@ Windows users should use `make.bat` instead.
 * French translations for chapter 1-3
 * Brazillian portuguese translations for chapter 2-4
 * Spanish translations for chapter 3
-* Starting new section for WebAssembly
 
 ## Release 3 - May 23, 2020
 * Chapter 4 released on generic data structures
